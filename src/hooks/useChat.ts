@@ -21,7 +21,8 @@ const useChat = () => {
     const stream = await openai.chat.completions.create({
       model: "",
       messages: newChat,
-      stream: true
+      stream: true,
+      max_tokens:300,
     })
     for await (const part of stream) {
       const content = part.choices[0]?.delta.content || ''

@@ -119,7 +119,7 @@ function App() {
       <Flex mx={"10%"} overflowY={"scroll"} flexDirection={"column"} style={{ flex: 1 }} ref={scrollRef}>
         {
           chat && chat.map(({ role, content }, index) => {
-            return <Message role={role} content={content} key={index} isLast={index === chat.length - 1} />
+            return <Message role={role} content={content!} key={index} isLast={index === chat.length - 1} />
           })
         }
 
