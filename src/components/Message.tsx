@@ -1,11 +1,11 @@
 import { FunctionComponent } from "react"
-import { ChatCompletionRequestMessageRoleEnum } from "openai"
+import OpenAI from "openai"
 import { Avatar, Card, Center, Flex, Text, SkeletonText, SkeletonCircle, CardProps, Spinner } from "@chakra-ui/react"
 import useTypewriter from "../hooks/useTypewriter"
 import useFlow from "../hooks/useFlow"
 
 interface Props extends CardProps {
-  role?: ChatCompletionRequestMessageRoleEnum,
+  role?: OpenAI.Chat.Completions.ChatCompletionRole,
   content?: string
   isProcessing?: boolean
   isLast?: boolean
